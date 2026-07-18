@@ -68,7 +68,7 @@ We benchmarked the architecture across two primary structural layouts:
 ## 🗺️ Project Roadmap
 Future updates intended to bypass sequence boundaries and scale performance:
 - [ ] **Trigram Transition Matrix:** Transitioning to a historical sequence framework: $P(\text{tag}_i \mid \text{tag}_{i-1}, \text{tag}_{i-2})$.
-- [ ] **Kneser-Ney Smoothing:** Integrating advanced back-off smoothing for less frequent n-grams.
+- [ ] - [ ] **Kneser-Ney Smoothing:** Integrating advanced back-off smoothing for less frequent n-grams.
 - [ ] **Morphological Token Pre-Parsing:** Incorporating morphological analyzers (e.g., *Zemberek*) to map agglutinative boundaries before training.
 - [ ] **Discriminative Transition (CRF):** Elevating the project to a Conditional Random Field (CRF) layout to support rich arbitrary feature mappings.
 
