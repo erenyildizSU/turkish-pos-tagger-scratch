@@ -1,10 +1,10 @@
-# 🎯 Turkish POS Tagger using Hidden Markov Models (HMM)
+# Turkish POS Tagger using Hidden Markov Models (HMM)
 
 An elegant, dependency-free Part-of-Speech (POS) tagger for the Turkish language implemented completely **from scratch**. This project models natural language sequences using a generative **Hidden Markov Model (HMM)** and decodes optimal state sequences via the dynamic programming-based **Viterbi Algorithm**.
 
 ---
 
-## 🚀 Key Highlights & Features
+## Key Highlights & Features
 * **Built From Scratch:** Pure Python/NumPy implementation of probability estimation, smoothing matrices, and trellis decoding without relying on sequence-labeling libraries (e.g., NLTK, spaCy).
 * **Linguistic Focus:** Specifically designed and trained on morphologically complex, agglutinative Turkish corpora.
 * **Underflow Prevention:** All mathematical operations are calculated in log-space to mitigate floating-point numeric underflow.
@@ -12,7 +12,7 @@ An elegant, dependency-free Part-of-Speech (POS) tagger for the Turkish language
 
 ---
 
-## 📊 Dataset & Setup
+## Dataset & Setup
 The models are trained and evaluated on the **Google Turkish Treebank** (merging the `web.conllu` and `wiki.conllu` corpora)[cite: 1]:
 * **Total Dataset Size:** 4,851 sentences[cite: 1]
 * **Train / Test Split:** 80% Train (3,880 sentences) / 20% Test (971 sentences) using a robust reproducible seed (`random_state=42`)[cite: 1].
@@ -20,7 +20,7 @@ The models are trained and evaluated on the **Google Turkish Treebank** (merging
 
 ---
 
-## 🛠️ Pipeline Architecture
+## Pipeline Architecture
 
 ### 1. Mathematical Probability Estimation (MLE)
 The system trains parameters directly from the text corpus using **Maximum Likelihood Estimation (MLE)**:
@@ -41,7 +41,7 @@ The structural search for the optimal hidden state sequence is solved using a dy
 
 ---
 
-## 🧪 Experimental Framework & Results
+## Experimental Framework & Results
 
 We benchmarked the architecture across two primary structural layouts:
 1. **Model A (Granular):** Employs all 14 baseline treebank tags (`ADJ`, `ADP`, `ADV`, `NOUN`, `VERB`, etc.)[cite: 1].
@@ -59,13 +59,13 @@ We benchmarked the architecture across two primary structural layouts:
 
 ---
 
-## ⚠️ Architectural Limitations
+## Architectural Limitations
 * **Markovian Constraint:** Being a Bigram HMM, the state depends strictly on the immediate predecessor $P(\text{tag}_i \mid \text{tag}_{i-1})$, which fails to encapsulate complex long-range sentence framing typical of Turkish.
 * **Surface-Level OOV Logic:** Unknown terms are generic targets smoothed globally; the system does not look at sub-word suffix formations (e.g., *-lar*, *-mak*) to make a structural deduction.
 
 ---
 
-## 🗺️ Project Roadmap
+## Project Roadmap
 Future updates intended to bypass sequence boundaries and scale performance:
 - [ ] **Trigram Transition Matrix:** Transitioning to a historical sequence framework: $P(\text{tag}_i \mid \text{tag}_{i-1}, \text{tag}_{i-2})$.
 - [ ] - [ ] **Kneser-Ney Smoothing:** Integrating advanced back-off smoothing for less frequent n-grams.
