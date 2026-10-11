@@ -80,3 +80,16 @@ Future updates intended to bypass sequence boundaries and scale performance:
 ├── wiki.conllu                # Wikipedia corpus from Google Turkish Treebank
 ├── turkish_hmm_pos_tagger.ipynb # Core notebook featuring code and evaluation
 └── LICENSE                    # MIT License
+
+```
+
+---
+
+## Copyright & Usage
+
+Copyright (c) 2026 Eren Yıldız. All rights reserved.
+This repository is publicly available for viewing and evaluation purposes.
+
+Except as permitted by applicable law and GitHub's Terms of Service, no permission is granted to reproduce, modify, redistribute, or use the source code without prior written authorization from the copyright holder. Presenting this project as one's own original work is not authorized.
+
+---
